@@ -1,5 +1,8 @@
 package com.masai.services;
 
-public interface FacultyService {
+import com.masai.entity.Batch;
+import com.masai.exception.SomeThingWentWrongException;
 
+public interface FacultyService {
+	void addBatch(Batch b) throws SomeThingWentWrongException; 
 }
