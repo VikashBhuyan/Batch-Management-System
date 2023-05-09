@@ -13,6 +13,8 @@ import com.masai.entity.Batch;
 import com.masai.entity.Faculty;
 import com.masai.exception.NoRecordFoundException;
 import com.masai.exception.SomeThingWentWrongException;
+import com.masai.services.BatchService;
+import com.masai.services.BatchServiceImp;
 
 import jakarta.persistence.EntityManager;
 
@@ -29,9 +31,9 @@ public class AdminUI {
 		double duration = sc.nextDouble();
 		Batch b = new Batch(courseName, seat, date, duration, null);
 
-		BatchDAO bdao = new BatchDAOImp();
+		BatchService bso = new BatchServiceImp();
 		try {
-			bdao.addBatch(b);
+			bso.addBatch(b);
 			System.out.println("Batch Added SuccessFully");
 		} catch (SomeThingWentWrongException e) {
 			// TODO Auto-generated catch block
@@ -49,9 +51,9 @@ public class AdminUI {
 		int seat = sc.nextInt();
 		System.out.println("Enter Updated Duration");
 		double duration = sc.nextDouble();
-		BatchDAO bdao = new BatchDAOImp();
+		BatchService bso = new BatchServiceImp();
 		try {
-			bdao.updateBatch(id, name, seat, duration);
+			bso.updateBatch(id, name, seat, duration);
 			System.out.println("Batch updated SuccessFully");
 		} catch (SomeThingWentWrongException | NoRecordFoundException e) {
 			// TODO Auto-generated catch block
@@ -62,9 +64,9 @@ public class AdminUI {
 		Batch b = null;
 		System.out.println("Enter Batch id to view Batch");
 		int id = sc.nextInt();
-		BatchDAO bdao = new BatchDAOImp();
+		BatchService bso = new BatchServiceImp();
 		try {
-			b = bdao.findBatchById(id);
+			b = bso.findBatchById(id);
 		} catch (NoRecordFoundException | SomeThingWentWrongException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -74,9 +76,9 @@ public class AdminUI {
 	public static void viewAllBatch() {
 		// TODO Auto-generated method stub
 		List<Batch> bl = null;
-		BatchDAO bdo = new BatchDAOImp();
+		BatchService bso = new BatchServiceImp();
 		try {
-			bl = bdo.getBatchList();
+			bl = bso.getBatchList();
 			for(Batch x : bl)
 			{
 				System.out.println(x);
@@ -89,9 +91,9 @@ public class AdminUI {
 		// TODO Auto-generated method stub
 		System.out.println("Eneter id of Batch to be deleted");
 		int id = sc.nextInt();
-		BatchDAO dbao = new BatchDAOImp();
+		BatchService bso = new BatchServiceImp();
 		try {
-			dbao.deleteBatch(id);
+			bso.deleteBatch(id);
 		} catch (NoRecordFoundException | SomeThingWentWrongException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -124,9 +126,9 @@ public class AdminUI {
 		System.out.println("Enter faculty id to whom to assign");
 		int fac_id = sc.nextInt();
 		
-		BatchDAO bdao = new BatchDAOImp();
+		BatchService bso = new BatchServiceImp();
 		try {
-			b = bdao.findBatchById(batch_id); 
+			b = bso.findBatchById(batch_id); 
 			
 		} catch (NoRecordFoundException | SomeThingWentWrongException e) {
 			// TODO Auto-generated catch block
@@ -139,7 +141,7 @@ public class AdminUI {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		bdao.assignBatchToFec(b,f);
+		bso.assignBatchToFec(b,f);
 		System.out.println("Batch added to feculty successful");
 		
 	}
