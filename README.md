@@ -23,5 +23,9 @@ Batchpilot is a Java based console application which makes the process of batch 
 <h2> ER Diagram </h2>
 
 ![alt text](https://github.com/VikashBhuyan/greedy-roof-9177/blob/main/batchpilot.PNG)
-
 <h2>SnapShot of the Project</h2>
+
+![alt text](https://github.com/VikashBhuyan/greedy-roof-9177/blob/main/img1.PNG)
+![alt text](https://github.com/VikashBhuyan/greedy-roof-9177/blob/main/img2.PNG)
+![alt text](https://github.com/VikashBhuyan/greedy-roof-9177/blob/main/img3.PNG)
+![alt text](https://github.com/VikashBhuyan/greedy-roof-9177/blob/main/img4.PNG)
