@@ -28,6 +28,7 @@ Batchpilot is a Java based console application which makes the process of batch 
 <h2> Exception </h2>
 <li>SomethingWentWrong</li>
 <li>NoRecordFoundException</li>
+<li>InputMismatchException</li>
 <h2> ER Diagram </h2>
 
 ![alt text](https://github.com/VikashBhuyan/greedy-roof-9177/blob/main/batchpilot.PNG)
