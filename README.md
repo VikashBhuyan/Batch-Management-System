@@ -1,5 +1,4 @@
 ![alt text](https://github.com/VikashBhuyan/greedy-roof-9177/blob/main/logoB.PNG)
-
 <h1> Batch-Pilot </h1>
 Batchpilot is a Java based console application which makes the process of batch management seamless. It is developed using tools like Maven, Frameworks like Hibernate and methodologies like DAO(Data Access Object). It uses mySQL as the primary Database. 
 <h2>Tech Stacks</h2>
