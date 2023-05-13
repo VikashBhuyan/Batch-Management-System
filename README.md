@@ -20,6 +20,14 @@ Batchpilot is a Java based console application which makes the process of batch 
 <li>Faculty Login</li>
 <li>Faculty Registration</li>
 <li>Show Batch Assigned</li>
+
+<h2> Entities </h2>
+<li>Batch</li>
+<li>Faculty</li>
+<li>LoggedInUser</li>
+<h2> Exception </h2>
+<li>SomethingWentWrong</li>
+<li>NoRecordFoundException</li>
 <h2> ER Diagram </h2>
 
 ![alt text](https://github.com/VikashBhuyan/greedy-roof-9177/blob/main/batchpilot.PNG)
